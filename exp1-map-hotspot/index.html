@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Chennai Interactive Map</title>
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Embedded CSS -->
+    <style>
+        h1 {
+            text-align: center;
+            color: #ffffff;
+            margin: 15px 0;
+        }
+
+        .selector {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            gap: 12px;
+            margin-top: 15px;
+        }
+
+        .spot {
+            cursor: pointer;
+            font-size: 16px;
+            padding: 10px 16px;
+            background: linear-gradient(145deg, #ffdddd, #ffffff);
+            border-radius: 12px;
+            border: 2px solid #ff3d3d;
+            font-weight: bold;
+            text-decoration: none;
+            color: black;
+            transition: transform 0.3s, box-shadow 0.3s;
+            box-shadow: 3px 3px 8px rgba(0,0,0,0.25);
+        }
+
+        .spot:hover {
+            transform: translateY(-3px);
+            box-shadow: 6px 6px 14px rgba(0,0,0,0.35);
+        }
+
+        .spot.back {
+            border-color: #2196f3;
+            background: linear-gradient(145deg, #d6ecff, #ffffff);
+        }
+    </style>
+</head>
+
+<body>
+
+<h1>Chennai Interactive Map with Connected Hotspots</h1>
+
+<div class="layout">
+
+    <!-- LEFT PANEL -->
+    <iframe src="left.html" class="side"></iframe>
+
+    <!-- CENTER -->
+    <div class="center">
+
+        <!-- MAP 1 -->
+        <div class="card">
+            <h2>Chennai Region Map</h2>
+
+            <iframe
+                name="mainMap"
+                src="https://www.google.com/maps?q=Chennai&z=11&output=embed"
+                class="map">
+            </iframe>
+        </div>
+
+        <!-- MAP 2 -->
+        <div class="card">
+            <h2>Chennai Hotspot Selector</h2>
+
+            <div class="selector">
+                <a class="spot"
+                   href="https://www.google.com/maps?q=Chennai+Central+Railway+Station&z=15&output=embed"
+                   target="mainMap">📍 Chennai Central</a>
+
+                <a class="spot"
+                   href="https://www.google.com/maps?q=Marina+Beach+Chennai&z=15&output=embed"
+                   target="mainMap">📍 Marina Beach</a>
+
+                <a class="spot"
+                   href="https://www.google.com/maps?q=IIT+Madras&z=15&output=embed"
+                   target="mainMap">📍 IIT Madras</a>
+
+                <a class="spot back"
+                   href="https://www.google.com/maps?q=Chennai&z=11&output=embed"
+                   target="mainMap">🔄 Back to Chennai View</a>
+            </div>
+
+            <p class="info">
+                Click a location to zoom the map. Use reset to return to Chennai view.
+            </p>
+        </div>
+
+    </div>
+
+    <!-- RIGHT PANEL -->
+    <iframe src="right.html" class="side"></iframe>
+
+</div>
+
+</body>
+</html>

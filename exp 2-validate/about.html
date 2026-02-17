@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>About Me</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', sans-serif;
+        }
+
+        body {
+            min-height: 100vh;
+            background: linear-gradient(120deg, #1d2671, #c33764);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+        }
+
+        .container {
+            width: 85%;
+            max-width: 900px;
+            background: rgba(255, 255, 255, 0.15);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            padding: 30px;
+            box-shadow: 0 30px 60px rgba(0,0,0,0.4);
+            animation: fadeIn 1.5s ease;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(40px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        h1 {
+            text-align: center;
+            font-size: 40px;
+            margin-bottom: 10px;
+        }
+
+        h3 {
+            text-align: center;
+            font-weight: normal;
+            opacity: 0.9;
+        }
+
+        section {
+            margin-top: 30px;
+        }
+
+        section h2 {
+            margin-bottom: 10px;
+            color: #ffdd57;
+        }
+
+        section p {
+            line-height: 1.6;
+        }
+
+        .skills span {
+            display: inline-block;
+            margin: 8px;
+            padding: 8px 15px;
+            background: rgba(0,0,0,0.3);
+            border-radius: 20px;
+            font-size: 14px;
+        }
+
+        .footer {
+            text-align: center;
+            margin-top: 30px;
+            font-size: 14px;
+            opacity: 0.8;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <!-- HERO SECTION -->
+    <h1>Mishal S </h1>
+    <h3>Student | Aspiring Web Developer</h3>
+
+    <!-- ABOUT ME -->
+    <section>
+        <h2>About Me</h2>
+        <p>
+            I am a passionate student who is learning web technologies and enjoys
+            building interactive and user-friendly webpages. I am interested in
+            front-end development and always curious to explore new technologies.
+        </p>
+    </section>
+
+    <!-- SKILLS -->
+    <section>
+        <h2>Skills</h2>
+        <div class="skills">
+            <span>HTML</span>
+            <span>CSS</span>
+            <span>JavaScript</span>
+            <span>Basic Web Design</span>
+            <span>Problem Solving</span>
+        </div>
+    </section>
+
+    <!-- EDUCATION -->
+    <section>
+        <h2>Education</h2>
+        <p>
+            Currently pursuing my studies in AIML.
+            I am learning programming concepts, web development, and software fundamentals.
+        </p>
+    </section>
+
+    <!-- INTERESTS -->
+    <section>
+        <h2>Interests</h2>
+        <p>
+            Web development, UI designing, learning new technologies,
+            listening to music, and exploring creative ideas.
+        </p>
+    </section>
+
+    <!-- CONTACT -->
+    <section>
+        <h2>Contact</h2>
+        <p>Email: example@email.com</p>
+        <p>Location: Chennai, India</p>
+    </section>
+
+    <div class="footer">
+        © 2026 | Personal Profile Page MISHAL S B.Tech 
+    </div>
+
+</div>
+
+</body>
+</html>

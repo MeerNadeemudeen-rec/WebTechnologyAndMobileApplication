@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Login Page</title>
+
+    <style>
+        body {
+            font-family: Arial;
+            background: linear-gradient(135deg, #43cea2, #185a9d);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .box {
+            background: white;
+            padding: 25px;
+            width: 350px;
+            border-radius: 10px;
+            box-shadow: 0 15px 30px rgba(0,0,0,0.3);
+        }
+
+        h2 {
+            text-align: center;
+            margin-bottom: 15px;
+        }
+
+        input, textarea {
+            width: 90%;
+            padding: 8px;
+            margin: 6px 0;
+        }
+
+        button {
+            width: 100%;
+            padding: 10px;
+            background: #185a9d;
+            color: white;
+            border: none;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+    </style>
+
+    <script>
+        function validateForm() {
+
+            var fname = document.getElementById("fname").value;
+            var lname = document.getElementById("lname").value;
+            var password = document.getElementById("password").value;
+            var email = document.getElementById("email").value;
+            var mobile = document.getElementById("mobile").value;
+            var address = document.getElementById("address").value;
+
+            var namePattern = /^[A-Za-z]+$/;
+            var emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+            // First Name
+            if (!namePattern.test(fname) || fname.length < 6) {
+                alert("First Name must contain only alphabets and minimum 6 characters");
+                return false;
+            }
+
+            // Password
+            if (password.length < 6) {
+                alert("Password must be at least 6 characters");
+                return false;
+            }
+
+            // Email
+            if (!emailPattern.test(email)) {
+                alert("Invalid Email format");
+                return false;
+            }
+
+            // Mobile Number
+            if (mobile.length != 10 || isNaN(mobile)) {
+                alert("Mobile number must contain exactly 10 digits");
+                return false;
+            }
+
+            // Last Name
+            if (lname === "") {
+                alert("Last Name should not be empty");
+                return false;
+            }
+
+            // Address
+            if (address === "") {
+                alert("Address should not be empty");
+                return false;
+            }
+
+            // If all validations pass
+            window.location.href = "about.html";
+            return false;
+        }
+    </script>
+</head>
+
+<body>
+
+<div class="box">
+    <h2>Login page</h2>
+
+    <form onsubmit="return validateForm()">
+        <input type="text" id="fname" placeholder="First Name">
+        <input type="text" id="lname" placeholder="Last Name">
+        <input type="password" id="password" placeholder="Password">
+        <input type="text" id="email" placeholder="Email">
+        <input type="text" id="mobile" placeholder="Mobile Number">
+        <textarea id="address" placeholder="Address"></textarea>
+
+        <button type="submit">Submit</button>
+    </form>
+</div>
+
+</body>
+</html>

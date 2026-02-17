@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Experiment 3</title>
+
+    <style>
+        body {
+            height: 100vh;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: linear-gradient(135deg,#ff99cc,#9900cc);
+            font-family: Arial, sans-serif;
+        }
+
+        .container {
+            text-align: center;
+            background: white;
+            padding: 40px 60px;
+            border-radius: 12px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+        }
+
+        button {
+            padding: 12px 30px;
+            font-size: 16px;
+            border: none;
+            border-radius: 25px;
+            cursor: pointer;
+            color: white;
+            background: linear-gradient(to right, #ff512f, #dd2476);
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        button:hover {
+            transform: scale(1.05);
+            box-shadow: 0 8px 15px rgba(0,0,0,0.3);
+        }
+
+        #output {
+            margin-top: 20px;
+            font-size: 20px;
+            font-weight: bold;
+            color: #333;
+        }
+    </style>
+
+    <script>
+        function showMessage() {
+            document.getElementById("output").innerHTML = "Hello World !!";
+        }
+    </script>
+</head>
+
+<body>
+
+    <div class="container">
+        <h2> – Button Click Event – </h2>
+        <button onclick="showMessage()">Click Me</button>
+        <p id="output"></p>
+    </div>
+
+</body>
+</html>
