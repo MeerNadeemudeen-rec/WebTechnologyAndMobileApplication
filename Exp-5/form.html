@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>GET vs POST Demo</title>
+</head>
+<body>
+    <h2>User Form</h2>
+
+    <!-- GET Form -->
+    <form action="GetPostServlet" method="get">
+        <h3>Submit using GET</h3>
+        Name: <input type="text" name="name"><br><br>
+        Email: <input type="email" name="email"><br><br>
+        <input type="submit" value="Submit via GET">
+    </form>
+
+    <hr>
+
+    <!-- POST Form -->
+    <form action="GetPostServlet" method="post">
+        <h3>Submit using POST</h3>
+        Name: <input type="text" name="name"><br><br>
+        Email: <input type="email" name="email"><br><br>
+        <input type="submit" value="Submit via POST">
+    </form>
+
+</body>
+</html>
